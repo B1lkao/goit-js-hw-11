@@ -1,29 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="./sass/main.scss" />
-  <title>Homework 11</title>
+  <title>Page title</title>
+  <link rel="stylesheet" href="./sass/index.scss" />
 </head>
 
 <body>
   <form class="search-form" id="search-form">
-    <input type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
-    <button type="submit">Search</button>
+    <input class="input" type="text" name="searchQuery" autocomplete="off" placeholder="Search images..." />
+    <button class="button" type="submit" name="button">
+      <img class="icon" src="./images/search.svg" alt="search" width="15" />
+    </button>
   </form>
-  <div class="gallery">
-    
-  </div>
-  <div class="btn-more">
-    <button type="button" class="load-more">Load more</button>
-  </div>
-  <script src="index.js" type="module"></script>
+  <div class="gallery"></div>
+  <div class="stt stt__circle__black"></div>
+  <img class="visually-hidden" alt="loading" src="./images/loader.gif" />
+  <include src="./partials/example.html"></include>
+  <script type="module" src="./index.js"></script>
+  <script src="./scrollToTop-min.js"></script>
 </body>
 
 </html>
