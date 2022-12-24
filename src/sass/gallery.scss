@@ -1,0 +1,38 @@
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1400px;
+    gap: 20px;
+    margin: 20px auto;
+}
+
+.photo-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 350ms linear;
+}
+
+.photo-card:hover,
+.photo-card:focus {
+    transform: scale(1.05);
+}
+
+.photo-img {
+    width: 310px;
+    height: 240px;
+    object-fit: cover;
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.info-item {
+    display: flex;
+    justify-content: center;
+}
