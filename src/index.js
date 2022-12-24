@@ -1,6 +1,6 @@
-import card from './templates/card.hbs'
 const loader=document.querySelector('[alt="loading"]')
 import Notiflix from 'notiflix';
+import NewAPIService from './new-service';
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 const lightbox = new SimpleLightbox('.gallery a', { captionsData: 'alt', captionDelay: 250 });
@@ -75,5 +75,35 @@ function plusPage (){
   }
 }
 
+function marcap(object) {
+  const marcap = object.data.hits.map(info => 
+          `<div class="photo-card">
+            <img src="${info.webformatURL}" alt="${info.tags}" loading="lazy" />
+            <div class="info">
+            <div>
+              <p class="info-item">
+                <b>Likes</b> ${info.likes}
+              </p>
+              <p class="info-item">
+               <b>Views</b> ${info.views}
+              </p>
+            </div>
+            <div>
+              <p class="info-item">
+                <b>Comments</b> ${info.comments}
+              </p>
+              <p class="info-item">
+                <b>Downloads</b> ${info.downloads}
+              </p>
+            </div>
+            </div>
+            </div>
+          
+        `).join('')
+      galleryEL.insertAdjacentHTML('beforeend', marcap);
+        console.log(galleryEL);
+      loadMore.classList.remove('visually-hidden');
+        console.log(loadMore);  
+}
 window.addEventListener('scroll', addElafterScroll)
 form.addEventListener('submit', onSubmitClick);
