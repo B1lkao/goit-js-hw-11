@@ -170,3 +170,10 @@ p {
     -ms-transform: translate(0, -50%) rotate(-45deg);
     transform: translate(0, -50%) rotate(-45deg);
 }
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(87, 155, 245);
+    border-color: rgb(87, 155, 245);
+    border-radius: 5px;
+}
